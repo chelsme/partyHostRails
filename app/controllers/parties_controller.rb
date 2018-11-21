@@ -2,6 +2,10 @@ class PartiesController < ApplicationController
     def index
         render json: Party.all
     end
+
+    def show
+        render json: party
+    end
     
     def create
         party = Party.create(party_params)

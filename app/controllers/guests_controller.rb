@@ -2,6 +2,10 @@ class GuestsController < ApplicationController
     def index
         render json: Guest.all
     end
+
+    def show
+        render json: guest
+    end
     
     def create
         guest = Guest.create(guest_params)

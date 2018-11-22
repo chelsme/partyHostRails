@@ -8,7 +8,7 @@ class GuestsController < ApplicationController
     end
     
     def create
-        guest = Guest.create(guest_params)
+        guest = Guest.find_or_create_by(guest_params)
         render json: guest
     end
     

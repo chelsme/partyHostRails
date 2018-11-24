@@ -2,6 +2,10 @@ class SongsController < ApplicationController
     def index
         render json: Song.all
     end
+
+    def show
+        render json: song
+    end
     
     def create
         song = Song.create(song_params)
@@ -20,6 +24,6 @@ class SongsController < ApplicationController
     
     private
     def song_params
-        params.require(:song).permit(:name, :artist, :party)
+        params.require(:song).permit(:name, :artist, :party_id)
     end
 end

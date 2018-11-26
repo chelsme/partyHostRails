@@ -9,6 +9,8 @@ class GuestsController < ApplicationController
     
     def create
         guest = Guest.find_or_create_by(guest_params)
+        party_guest = PartyGuest.create(guest_id: guest.id, party_id: params[:party_id])
+        
         render json: guest
     end
     

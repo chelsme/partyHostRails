@@ -8,7 +8,8 @@ class TasksController < ApplicationController
     end
     
     def create
-        task = Task.create(task_params)
+        guest = Guest.find_by(name: params[:guest_name])
+        task = Task.create(action: task_params[:action], party_id: task_params[:party_id], guest_id: guest.id)
         render json: task
     end
     
@@ -24,6 +25,6 @@ class TasksController < ApplicationController
     
     private
     def task_params
-        params.require(:task).permit(:action, :party, :guest)
+        params.require(:task).permit(:action, :party_id, :guest_id)
     end
 end

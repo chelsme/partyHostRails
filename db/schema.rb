@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2018_11_24_155231) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "action"
-    t.integer "guest_id"
+    t.integer "guest_id", default: 1
     t.integer "party_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

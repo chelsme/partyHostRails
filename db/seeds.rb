@@ -12,6 +12,7 @@ Song.destroy_all
 Guest.destroy_all
 Party.destroy_all
 
+empty = Guest.create(name: "", username: '', password: '', picture: '')
 chels = Guest.create(name: "Chelsea Crowson", username: 'chelsme', password: 'cat', picture: 'http://chelseacrowson.com/images/pic.png')
 amanda = Guest.create(name: 'Amanda', username: 'spenceam', password: 'dog', picture: 'https://static.comicvine.com/uploads/original/2/22385/408971-164777-amanda-spence.jpg')
 bn = Guest.create(name: 'Bill Nye', username: 'scienceguy', password: 'science', picture: 'https://innotechtoday.com/wp-content/uploads/2016/03/Copy-of-20150515_BN_Props_237_ca.jpg')
@@ -21,13 +22,13 @@ old = Party.create(name: 'Chelsea is old', host_id: 1, date: 'June 8', time: '4p
 Song.create(name: 'Waterfalls', artist: 'TLC', party: nye)
 Song.create(name: 'No Scrubs', artist: 'TLC', party: nye)
 Song.create(name: 'Spider Webs', artist: 'No Doubt', party: nye)
-Task.create(action: 'bring cups', party_id: 1, guest_id: 1)
+Task.create(action: 'bring cups', party_id: 1, guest_id: 4)
 Task.create(action: 'bring fizzy fruit', party_id: 1, guest_id: 2)
 Task.create(action: 'pump up the jam', party_id: 1, guest_id: 3)
 Task.create(action: 'bring chairs', party_id: 1, guest_id: 2)
-PartyGuest.create(party_id: 1, guest_id: 1)
-PartyGuest.create(party_id: 2, guest_id: 1)
-PartyGuest.create(party_id: 3, guest_id: 1)
+PartyGuest.create(party_id: 1, guest_id: 4)
+PartyGuest.create(party_id: 2, guest_id: 4)
+PartyGuest.create(party_id: 3, guest_id: 4)
 PartyGuest.create(party_id: 1, guest_id: 2)
 PartyGuest.create(party_id: 2, guest_id: 2)
 PartyGuest.create(party_id: 1, guest_id: 3)

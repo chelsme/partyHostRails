@@ -4,6 +4,7 @@ class PartiesController < ApplicationController
     end
 
     def show
+        party = Party.find(params[:id])
         render json: party
     end
     

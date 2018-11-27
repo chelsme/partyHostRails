@@ -13,8 +13,8 @@ Guest.destroy_all
 Party.destroy_all
 
 empty = Guest.create(name: "", username: '', password: '', picture: '')
+amanda = Guest.create(name: 'Amanda Spence', username: 'spenceam', password: 'dog', picture: 'https://static.comicvine.com/uploads/original/2/22385/408971-164777-amanda-spence.jpg')
 chels = Guest.create(name: "Chelsea Crowson", username: 'chelsme', password: 'cat', picture: 'http://chelseacrowson.com/images/pic.png')
-amanda = Guest.create(name: 'Amanda', username: 'spenceam', password: 'dog', picture: 'https://static.comicvine.com/uploads/original/2/22385/408971-164777-amanda-spence.jpg')
 bn = Guest.create(name: 'Bill Nye', username: 'scienceguy', password: 'science', picture: 'https://innotechtoday.com/wp-content/uploads/2016/03/Copy-of-20150515_BN_Props_237_ca.jpg')
 nye = Party.create(name: 'NYE Bash', host_id: 2, date: 'Dec 30', time: 'midnight', location: '1302 Alphabet Street')
 bday = Party.create(name: 'BDay Party', host_id: 2, date: 'Dec 20', time: '7pm', location: 'my house')

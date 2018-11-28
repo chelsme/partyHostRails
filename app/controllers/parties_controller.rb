@@ -5,11 +5,13 @@ class PartiesController < ApplicationController
 
     def show
         party = Party.find(params[:id])
+        
         render json: party
     end
     
     def create
         party = Party.create(party_params)
+        PartyGuest.create(guest_id: params[:host_id], party_id: party.id)
         render json: party
     end
     

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2018_11_24_155231) do
   create_table "guests", force: :cascade do |t|
     t.string "name"
     t.string "username"
-    t.string "password"
+    t.string "password", default: ""
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

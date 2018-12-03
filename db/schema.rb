@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_11_24_155231) do
   create_table "party_guests", force: :cascade do |t|
     t.integer "party_id"
     t.integer "guest_id"
+    t.string "RSVP", default: "tbd"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

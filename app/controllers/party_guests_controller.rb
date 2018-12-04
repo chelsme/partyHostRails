@@ -19,12 +19,12 @@ class PartyGuestsController < ApplicationController
     
     def update
         party_guest = PartyGuest.find(params[:id])
-        part_guesty.update_attributes(party_guest_params)
+        party_guest.update_attributes(party_guest_params)
         render json: party_guest
     end
     
     private
     def party_guest_params
-        params.require(:party_guest).permit(:party_id, :guest_id)
+        params.require(:party_guest).permit(:party_id, :guest_id, :RSVP)
     end
 end
